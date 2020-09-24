@@ -1,7 +1,7 @@
 <template>
   <el-container>
-    <el-header style="padding: 0px;">
-      <indexheader></indexheader>
+    <el-header style="height: 100px; padding: 0px;">
+      <toolbar></toolbar>
     </el-header>
     <el-main>
       <router-view name="mainPanel"></router-view>
@@ -10,12 +10,14 @@
 </template>
 
 <script>
-    import indexheader from '@/views/system/header.vue'
+    import toolbar from '@/views/system/toolbar.vue'
+    //import homeIndex from '@/views/index.vue'
 
     export default {
         name: "index",
         components: {
-            indexheader: indexheader,
+            toolbar: toolbar,
+            //homeIndex:homeIndex,
         }
     }
 </script>

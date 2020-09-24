@@ -13,7 +13,14 @@ export default new Router({
     meta: {
       requireAuth: false
     }, //meta:{requireAuth: true }，这个配置，主要为验证做服务。
-    children: []
+    children: [{
+      path: '/',
+      name: 'index',
+      components: {
+        default: (resolve) => require(['@/views/index.vue'], resolve),
+        mainPanel: (resolve) => require(['@/views/index.vue'], resolve),
+      },
+    },]
   },
   ]
 })
